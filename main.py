@@ -9,10 +9,31 @@ datos = {
 }
 
 # Aca muestro el dataframe, una vez creado
-df = pd.DataFrame(data=datos)
+df = pd.DataFrame(datos)
 print(df)
 
 print("\n")
 
 # Filtrar por columnas, y mostrar los tipos de datos
-print(df['edades'])
+columnaEdades =df['edades']
+print(columnaEdades)
+
+print("\n")
+
+# Obtener el minimo en una columna, y el maximo
+maximoYMinimo =str(df['edades'].min())+ '-' + str(df['edades'].max())
+
+print(maximoYMinimo)
+
+# Obtener en base a los datos, la media,la cantidad de datos,la desviacion estandar, el minimo, el maximo y algunos porcentajes
+multiplesDatos = df.describe()
+
+print("\n")
+
+print(multiplesDatos)
+
+# Informacion 'tecnica'
+
+infoTec = df.info()
+
+print(infoTec)
